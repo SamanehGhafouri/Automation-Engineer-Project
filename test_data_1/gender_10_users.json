@@ -1,4 +1,4 @@
-{ "description": "test data for 10 users",
+{ "description": "test data for 10 users. male more than female.",
   "data": {
   "actionType": "CountByGender",
   "top": 0,

@@ -1,5 +1,5 @@
 {
-  "description": "test data for 1 user",
+  "description": "test data for 1 user. only male",
   "data": {
     "actionType": "CountByGender",
     "top": 0,
