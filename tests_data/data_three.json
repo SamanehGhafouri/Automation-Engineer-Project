@@ -1,0 +1,286 @@
+{
+  "actionType": "CountByGender",
+  "top": 0,
+  "users": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Barış",
+        "last": "Elçiboğa"
+      },
+      "location": {
+        "street": {
+          "number": 1105,
+          "name": "Abanoz Sk"
+        },
+        "city": "Bingöl",
+        "state": "Mersin",
+        "country": "Turkey",
+        "postcode": 79468,
+        "coordinates": {
+          "latitude": "69.7294",
+          "longitude": "-130.9504"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "email": "baris.elciboga@example.com",
+      "login": {
+        "uuid": "2521626c-9478-427c-be54-59e219351730",
+        "username": "goldenfrog422",
+        "password": "trees",
+        "salt": "MsEIiBY9",
+        "md5": "62cb4a5b36adff96708849f042213969",
+        "sha1": "e9af6ec886d46aa5a624bf72d03f10723925c7b8",
+        "sha256": "0655a2f442c195e3a84cc2f4689156bf90729554347ebccc6a4d8255356c4dc9"
+      },
+      "dob": {
+        "date": "1978-04-16T21:34:32.826Z",
+        "age": 43
+      },
+      "registered": {
+        "date": "2017-08-12T17:03:14.916Z",
+        "age": 4
+      },
+      "phone": "(052)-314-1034",
+      "cell": "(341)-370-5261",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/15.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/15.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Cameron",
+        "last": "Chen"
+      },
+      "location": {
+        "street": {
+          "number": 8035,
+          "name": "Brougham Street"
+        },
+        "city": "Nelson",
+        "state": "West Coast",
+        "country": "New Zealand",
+        "postcode": 69826,
+        "coordinates": {
+          "latitude": "-34.4235",
+          "longitude": "-16.2296"
+        },
+        "timezone": {
+          "offset": "+4:30",
+          "description": "Kabul"
+        }
+      },
+      "email": "cameron.chen@example.com",
+      "login": {
+        "uuid": "4736b094-a1d6-430a-818f-a121dffb81ab",
+        "username": "purplepanda971",
+        "password": "antony",
+        "salt": "hkf290QI",
+        "md5": "74339f41251499628f478677738d28a8",
+        "sha1": "b4131445633d9f28c6eeaedb7e8adb4a64a0d9c6",
+        "sha256": "eba37da2f9f5c3e4221071deb8f246c153d722c530d61f25fcee3554b92e7921"
+      },
+      "dob": {
+        "date": "1959-01-06T16:56:40.181Z",
+        "age": 62
+      },
+      "registered": {
+        "date": "2013-05-16T20:44:26.079Z",
+        "age": 8
+      },
+      "phone": "(188)-472-4591",
+      "cell": "(994)-113-6866",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/47.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/47.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/47.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Mateusz",
+        "last": "Smestad"
+      },
+      "location": {
+        "street": {
+          "number": 3966,
+          "name": "Thulstrups gate"
+        },
+        "city": "Kragerø",
+        "state": "Telemark",
+        "country": "Norway",
+        "postcode": "0614",
+        "coordinates": {
+          "latitude": "84.3892",
+          "longitude": "-84.4036"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "mateusz.smestad@example.com",
+      "login": {
+        "uuid": "a72de7b4-69f2-4ee7-924a-dabc79c76d6c",
+        "username": "orangebird833",
+        "password": "ddddddd",
+        "salt": "vPrgZ8ck",
+        "md5": "a037c11c440566b7042d25b4fffd338f",
+        "sha1": "dc494547505c9646c8582824bc9b8c8ca06819a8",
+        "sha256": "951cc5338ab7f4c6c6facccb62ebffd138283da9267d3fd901d290c463496a2b"
+      },
+      "dob": {
+        "date": "1990-03-09T16:25:00.819Z",
+        "age": 31
+      },
+      "registered": {
+        "date": "2008-09-04T22:21:05.314Z",
+        "age": 13
+      },
+      "phone": "23713059",
+      "cell": "40614794",
+      "id": {
+        "name": "FN",
+        "value": "09039030125"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/17.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/17.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/17.jpg"
+      },
+      "nat": "NO"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Didaco",
+        "last": "Alves"
+      },
+      "location": {
+        "street": {
+          "number": 6453,
+          "name": "Rua José Bonifácio "
+        },
+        "city": "Macaé",
+        "state": "Rondônia",
+        "country": "Brazil",
+        "postcode": 99801,
+        "coordinates": {
+          "latitude": "-64.1703",
+          "longitude": "-57.8950"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "email": "didaco.alves@example.com",
+      "login": {
+        "uuid": "a41df024-81dd-4521-ab24-08e41a26cf76",
+        "username": "organicgoose335",
+        "password": "raven1",
+        "salt": "Mv0Ajeea",
+        "md5": "c0b0f928cacc9e21b6986267976a1f66",
+        "sha1": "604478671b25c1bb3e062c45172acedb4fb1e9e6",
+        "sha256": "3b0d0c4dfa8f319d94a3bf78cee6405927c80d92b5bd226cdcfef403a39fbedd"
+      },
+      "dob": {
+        "date": "1946-11-20T14:10:05.309Z",
+        "age": 75
+      },
+      "registered": {
+        "date": "2004-02-15T15:40:31.814Z",
+        "age": 17
+      },
+      "phone": "(07) 4705-7541",
+      "cell": "(10) 6818-7735",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/44.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/44.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/44.jpg"
+      },
+      "nat": "BR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Efe",
+        "last": "Yetkiner"
+      },
+      "location": {
+        "street": {
+          "number": 3330,
+          "name": "Necatibey Cd"
+        },
+        "city": "Mardin",
+        "state": "Muş",
+        "country": "Turkey",
+        "postcode": 77203,
+        "coordinates": {
+          "latitude": "-76.6905",
+          "longitude": "-144.1478"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "email": "efe.yetkiner@example.com",
+      "login": {
+        "uuid": "340fa58c-f95f-4621-90b9-540170c6c09c",
+        "username": "redbutterfly236",
+        "password": "lillie",
+        "salt": "v13rFbv9",
+        "md5": "9e191724fb3dce83abf89d0b67e7b1f9",
+        "sha1": "8e91cd5ffdb8d7ce8aafd4475acc143f630e4e4e",
+        "sha256": "1eee117fc6443ddeedbf0ad8153a1e9b1085c0b281923bc9bafdce554b9010b2"
+      },
+      "dob": {
+        "date": "1989-01-01T12:49:37.640Z",
+        "age": 32
+      },
+      "registered": {
+        "date": "2011-03-11T11:22:05.178Z",
+        "age": 10
+      },
+      "phone": "(503)-900-2695",
+      "cell": "(164)-124-9432",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/55.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/55.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/55.jpg"
+      },
+      "nat": "TR"
+    }
+  ]
+}
