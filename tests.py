@@ -22,5 +22,5 @@ class TestsGender:
     def test_count_by_gender_10_users(self):
         request_json = read_json(data_10_users)
         response = requests.post(url, json=request_json)
-        assert [{"name": "male", "value": 7}, {"name": "female", "value": 3}]
+        assert [{"name": "male", "value": 7}, {"name": "female", "value": 3}] == response.json()
 
