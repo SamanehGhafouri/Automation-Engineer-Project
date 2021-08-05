@@ -1,0 +1,71 @@
+{
+  "description": "test data for 1 user",
+  "data": {
+    "actionType": "CountByGender",
+    "top": 0,
+    "users": [
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "Okan",
+          "last": "Balaban"
+        },
+        "location": {
+          "street": {
+            "number": 4353,
+            "name": "Fatih Sultan Mehmet Cd"
+          },
+          "city": "Giresun",
+          "state": "Amasya",
+          "country": "Turkey",
+          "postcode": 93314,
+          "coordinates": {
+            "latitude": "75.0198",
+            "longitude": "-55.7225"
+          },
+          "timezone": {
+            "offset": "+4:30",
+            "description": "Kabul"
+          }
+        },
+        "email": "okan.balaban@example.com",
+        "login": {
+          "uuid": "d3a6c50e-b486-4157-9a9a-91b8cbca7645",
+          "username": "purpleostrich608",
+          "password": "nova",
+          "salt": "RpHyhtCt",
+          "md5": "b41bdc324509cebef7b2956c9ed3ba3c",
+          "sha1": "d9e3189396997fc615e2c257c6d7c93f18134c48",
+          "sha256": "db0957bb306f44c137a309dd276129620ba084537695e2be16527d3c51517fdc"
+        },
+        "dob": {
+          "date": "1950-06-07T03:03:19.146Z",
+          "age": 71
+        },
+        "registered": {
+          "date": "2014-05-03T07:25:53.380Z",
+          "age": 7
+        },
+        "phone": "(777)-643-3342",
+        "cell": "(907)-878-5302",
+        "id": {
+          "name": "",
+          "value": null
+        },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/51.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/51.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/51.jpg"
+        },
+        "nat": "TR"
+      }
+    ]
+  },
+  "expected_gender": [
+    {
+      "name": "male",
+      "value": 1
+    }
+  ]
+}

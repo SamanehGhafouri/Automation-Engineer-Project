@@ -1,0 +1,10 @@
+{
+  "description": "test data for 0 users outside the scope of the requirements",
+  "data": {
+    "actionType": "CountByGender",
+    "top": 0,
+    "users": [
+    ]
+  },
+  "expected_gender": []
+}
