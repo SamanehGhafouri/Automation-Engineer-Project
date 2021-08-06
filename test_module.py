@@ -17,7 +17,7 @@ class Tests:
         'test_data_1/gender_10_users.json',
         'test_data_1/gender_5_users.json',
         'test_data_1/gender_1_user.json',
-        # 'test_data_1/gender_0_users.json',
+        'test_data_1/gender_0_users.json',
         'test_data_1/gender_15_users.json'
     ])
     def test_gender(self, base):
@@ -30,7 +30,7 @@ class Tests:
         'test_data_1/gender_10_users.json',
         'test_data_1/gender_5_users.json',
         'test_data_1/gender_1_user.json',
-        # 'test_data_1/gender_0_users.json',
+        'test_data_1/gender_0_users.json',
         'test_data_1/gender_15_users.json'
     ])
     def test_count_by_country(self, base):

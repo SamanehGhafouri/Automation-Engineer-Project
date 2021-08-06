@@ -6,5 +6,6 @@
     "users": [
     ]
   },
-  "expected_gender": []
+  "expected_gender": [],
+  "expected_country": []
 }
