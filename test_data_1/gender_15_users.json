@@ -1,7 +1,7 @@
 {
   "description": "test data for 15 users. female more than men",
   "data": {
-    "actionType": "CountByGender",
+    "actionType": "<added programmatically>",
     "top": 0,
     "users": [
       {
@@ -854,6 +854,52 @@
     {
       "name": "male",
       "value": 7
+    }
+  ],
+  "expected_country": [
+    {
+      "name": "GB",
+      "value": 3
+    },
+    {
+      "name": "US",
+      "value": 2
+    },
+    {
+      "name": "NZ",
+      "value": 2
+    },
+    {
+      "name": "TR",
+      "value": 1
+    },
+    {
+      "name": "NO",
+      "value": 1
+    },
+    {
+      "name": "NL",
+      "value": 1
+    },
+    {
+      "name": "IR",
+      "value": 1
+    },
+    {
+      "name": "IE",
+      "value": 1
+    },
+    {
+      "name": "FR",
+      "value": 1
+    },
+    {
+      "name": "FI",
+      "value": 1
+    },
+    {
+      "name": "DE",
+      "value": 1
     }
   ]
 }
