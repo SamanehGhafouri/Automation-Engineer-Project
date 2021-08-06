@@ -1,7 +1,7 @@
 {
   "description": "test data for 1 user. only male",
   "data": {
-    "actionType": "CountByGender",
+    "actionType": "<added programmatically>",
     "top": 0,
     "users": [
       {
@@ -65,6 +65,12 @@
   "expected_gender": [
     {
       "name": "male",
+      "value": 1
+    }
+  ],
+  "expected_country": [
+    {
+      "name": "TR",
       "value": 1
     }
   ]
