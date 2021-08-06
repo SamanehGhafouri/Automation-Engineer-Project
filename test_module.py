@@ -14,11 +14,11 @@ def read_json(json_f):
 class Tests:
 
     @parameterized.expand([
-        'test_data_1/gender_10_users.json',
-        'test_data_1/gender_5_users.json',
-        'test_data_1/gender_1_user.json',
-        'test_data_1/gender_0_users.json',
-        'test_data_1/gender_15_users.json'
+        'test_data/gender_country_password_10_user.json',
+        'test_data/gender_country_password_5_user.json',
+        'test_data/gender_country_password_1_user.json',
+        'test_data/gender_country_password_0_users.json',
+        'test_data/gender_country_password_15_user.json'
     ])
     def test_gender(self, base):
         data = read_json(base)
@@ -27,11 +27,11 @@ class Tests:
         assert data["expected_gender"] == response.json()
 
     @parameterized.expand([
-        'test_data_1/gender_10_users.json',
-        'test_data_1/gender_5_users.json',
-        'test_data_1/gender_1_user.json',
-        'test_data_1/gender_0_users.json',
-        'test_data_1/gender_15_users.json'
+        'test_data/gender_country_password_10_user.json',
+        'test_data/gender_country_password_5_user.json',
+        'test_data/gender_country_password_1_user.json',
+        'test_data/gender_country_password_0_users.json',
+        'test_data/gender_country_password_15_user.json'
     ])
     def test_count_by_country(self, base):
         data = read_json(base)
@@ -39,16 +39,60 @@ class Tests:
         response = requests.post(url, json=data["data"])
         assert data["expected_country"] == response.json()
 
+    # Testing if the length of expected = length of actual
     @parameterized.expand([
-        'test_data_1/gender_10_users.json',
-        'test_data_1/gender_5_users.json',
-        'test_data_1/gender_1_user.json',
-        'test_data_1/gender_0_users.json',
-        'test_data_1/gender_15_users.json'
+        'test_data/gender_country_password_10_user.json',
+        'test_data/gender_country_password_5_user.json',
+        'test_data/gender_country_password_1_user.json',
+        'test_data/gender_country_password_0_users.json',
+        'test_data/gender_country_password_15_user.json'
     ])
-    def test_count_password_complexity(self, base):
+    def test_len_count_password_complexity(self, base):
         data = read_json(base)
         data["data"]["actionType"] = "CountPasswordComplexity"
         response = requests.post(url, json=data["data"])
-        assert data["expected_password_complexity"] == response.json()
+        if len(response.json()) != len(data["expected_password_complexity"]):
+            assert False
+        assert True
 
+    # Testing if the values are in descending order
+    @parameterized.expand([
+        'test_data/gender_country_password_10_user.json',
+        'test_data/gender_country_password_5_user.json',
+        'test_data/gender_country_password_1_user.json',
+        'test_data/gender_country_password_0_users.json',
+        'test_data/gender_country_password_15_user.json'
+    ])
+    def test_count_password_complexity_values_descending(self, base):
+        data = read_json(base)
+        data["data"]["actionType"] = "CountPasswordComplexity"
+        response = requests.post(url, json=data["data"])
+
+        actual = []
+        for obj in response.json():
+            actual.append(obj["value"])
+        assert sorted(actual, reverse=True) == actual
+
+    # Testing if (key, value) in expected is equal to (key, value) in actual
+    @parameterized.expand([
+        'test_data/gender_country_password_10_user.json',
+        'test_data/gender_country_password_5_user.json',
+        'test_data/gender_country_password_1_user.json',
+        'test_data/gender_country_password_0_users.json',
+        'test_data/gender_country_password_15_user.json'
+    ])
+    def test_count_password_complexity_name_value(self, base):
+        data = read_json(base)
+        data["data"]["actionType"] = "CountPasswordComplexity"
+        response = requests.post(url, json=data["data"])
+
+        actual = set()
+        for obj in response.json():
+            tuples = tuple([v for v in obj.values()])
+            actual.add(tuples)
+
+        expected = set()
+        for obj in data["expected_password_complexity"]:
+            tuples = tuple([v for v in obj.values()])
+            expected.add(tuples)
+        assert expected == actual
