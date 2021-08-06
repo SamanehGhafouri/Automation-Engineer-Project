@@ -7,5 +7,6 @@
     ]
   },
   "expected_gender": [],
-  "expected_country": []
+  "expected_country": [],
+  "expected_password_complexity": []
 }

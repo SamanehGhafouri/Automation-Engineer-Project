@@ -73,5 +73,11 @@
       "name": "TR",
       "value": 1
     }
+  ],
+  "expected_password_complexity": [
+    {
+      "name": "nova",
+      "value": 0
+    }
   ]
 }

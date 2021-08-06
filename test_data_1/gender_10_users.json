@@ -613,5 +613,48 @@
       "name": "BR",
       "value": 1
     }
+  ],
+  "expected_password_complexity": [
+        {
+      "name": "playboy1",
+      "value": 1
+    },
+    {
+      "name": "jaguar1",
+      "value": 1
+    },
+    {
+      "name": "woof",
+      "value": 0
+    },
+    {
+      "name": "wildbill",
+      "value": 0
+    },
+    {
+      "name": "sister",
+      "value": 0
+    },
+    {
+      "name": "payton",
+      "value": 0
+    },
+    {
+      "name": "mykids",
+      "value": 0
+    },
+    {
+      "name": "maggie",
+      "value": 0
+    },
+    {
+      "name": "jackjack",
+      "value": 0
+    },
+    {
+      "name": "bball",
+      "value": 0
+    }
+
   ]
 }

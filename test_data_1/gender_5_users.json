@@ -309,5 +309,27 @@
       "name": "BR",
       "value": 1
     }
+  ],
+  "expected_password_complexity": [
+    {
+      "name": "raven1",
+      "value": 1
+    },
+    {
+      "name": "tree",
+      "value": 0
+    },
+    {
+      "name": "lillie",
+      "value": 0
+    },
+    {
+      "name": "ddddddd",
+      "value": 0
+    },
+    {
+      "name": "antony",
+      "value": 0
+    }
   ]
 }

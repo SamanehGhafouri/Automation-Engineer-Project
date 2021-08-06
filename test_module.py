@@ -39,5 +39,16 @@ class Tests:
         response = requests.post(url, json=data["data"])
         assert data["expected_country"] == response.json()
 
-
+    @parameterized.expand([
+        'test_data_1/gender_10_users.json',
+        'test_data_1/gender_5_users.json',
+        'test_data_1/gender_1_user.json',
+        'test_data_1/gender_0_users.json',
+        'test_data_1/gender_15_users.json'
+    ])
+    def test_count_password_complexity(self, base):
+        data = read_json(base)
+        data["data"]["actionType"] = "CountPasswordComplexity"
+        response = requests.post(url, json=data["data"])
+        assert data["expected_password_complexity"] == response.json()
 

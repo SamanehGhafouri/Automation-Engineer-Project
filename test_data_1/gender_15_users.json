@@ -901,5 +901,67 @@
       "name": "DE",
       "value": 1
     }
+  ],
+  "expected_password_complexity": [
+    {
+      "name": "635241",
+      "value": 6
+    },
+    {
+      "name": "515151",
+      "value": 6
+    },
+    {
+      "name": "transit",
+      "value": 0
+    },
+    {
+      "name": "snowboard",
+      "value": 0
+    },
+    {
+      "name": "shanti",
+      "value": 0
+    },
+    {
+      "name": "shania",
+      "value": 0
+    },
+    {
+      "name": "score",
+      "value": 0
+    },
+    {
+      "name": "photo",
+      "value": 0
+    },
+    {
+      "name": "overkill",
+      "value": 0
+    },
+    {
+      "name": "lemmein",
+      "value": 0
+    },
+    {
+      "name": "klingon",
+      "value": 0
+    },
+    {
+      "name": "jean",
+      "value": 0
+    },
+    {
+      "name": "hairy",
+      "value": 0
+    },
+    {
+      "name": "fuzzy",
+      "value": 0
+    },
+    {
+      "name": "chestnut",
+      "value": 0
+    }
   ]
 }
