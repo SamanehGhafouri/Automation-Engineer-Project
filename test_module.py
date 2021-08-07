@@ -22,6 +22,13 @@ test_data_source = [
 
 class Tests:
 
+    # status code for single json as an input
+    def test_status_code_single_json(self):
+        data = read_json(test_data_source[0])
+        data["data"]["actionType"] = "CountByGender"
+        response = requests.post(url, json=data["data"])
+        assert response.status_code == 200
+
     # Testing field json parameters
     def test_bad_data(self):
         response = requests.post(url, json=[])
