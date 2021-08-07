@@ -22,6 +22,35 @@ test_data_source = [
 
 class Tests:
 
+    # Testing field json parameters
+    def test_bad_data(self):
+        response = requests.post(url, json=[])
+        assert response.status_code == 400
+
+    # Testing field json parameters: no value provided for actionType
+    def test_bad_data_missing_action_type_value(self):
+        data = read_json(test_data_source[0])
+        # empty action type
+        data["data"]["actionType"] = ""
+        response = requests.post(url, json=data["data"])
+        assert response.status_code == 400
+
+    # Testing filed json parameters: no value provided for users
+    def test_bad_data_missing_users_value(self):
+        data = read_json(test_data_source[0])
+        data["data"]["actionType"] = "CountByGender"
+        data["data"]["users"] = ""
+        response = requests.post(url, json=data["data"])
+        assert response.status_code == 400
+
+    # Testing json field top: top > 0
+    def test_optional_parameter_top(self):
+        data = read_json(test_data_source[0])
+        data["data"]["actionType"] = "CountByCountry"
+        data["data"]["top"] = "3"
+        response = requests.post(url, json=data["data"])
+        assert len(response.json()) == 3
+
     # Testing if the length of expected = length of actual
     @pytest.mark.parametrize("source", test_data_source)
     def test_length_count_by_gender(self, source):
@@ -104,7 +133,6 @@ class Tests:
         data = read_json(source)
         data["data"]["actionType"] = "CountPasswordComplexity"
         response = requests.post(url, json=data["data"])
-        # todo: simplify this assertion
         assert len(response.json()) == len(data["expected_password_complexity"])
 
     # Testing if the values are in descending order
