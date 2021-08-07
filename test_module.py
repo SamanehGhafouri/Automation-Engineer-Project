@@ -1,6 +1,6 @@
 import json
 import requests
-from parameterized import parameterized
+import pytest
 
 url = 'https://census-toy.nceng.net/prod/toy-census'
 
@@ -11,34 +11,29 @@ def read_json(json_f):
     return data_obj
 
 
+test_data_source = [
+    'test_data/gender_country_password_10_user.json',
+    'test_data/gender_country_password_5_user.json',
+    'test_data/gender_country_password_1_user.json',
+    'test_data/gender_country_password_0_users.json',
+    'test_data/gender_country_password_15_user.json'
+]
+
+
 class Tests:
 
     # Testing if the length of expected = length of actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_len_count_by_gender(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_length_count_by_gender(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByGender"
         response = requests.post(url, json=data["data"])
-        if len(response.json()) != len(data["expected_gender"]):
-            assert False
-        assert True
+        assert len(response.json()) == len(data["expected_gender"])
 
     # Testing if the values are in descending order
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_by_gender_values_descending(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_by_gender_values_descending(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByGender"
         response = requests.post(url, json=data["data"])
 
@@ -48,15 +43,9 @@ class Tests:
         assert sorted(actual, reverse=True) == actual
 
     # Testing if (key, value) in expected is equal to (key, value) in actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_by_gender_name_value(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_by_gender_name_value(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByGender"
         response = requests.post(url, json=data["data"])
 
@@ -72,31 +61,17 @@ class Tests:
         assert expected == actual
 
     # Testing if the length of expected = length of actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_len_count_by_country(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_length_count_by_country(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByCountry"
         response = requests.post(url, json=data["data"])
-        if len(response.json()) != len(data["expected_country"]):
-            assert False
-        assert True
+        assert len(response.json()) == len(data["expected_country"])
 
     # Testing if the values are in descending order
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_by_country_values_descending(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_by_country_values_descending(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByCountry"
         response = requests.post(url, json=data["data"])
 
@@ -106,15 +81,9 @@ class Tests:
         assert sorted(actual, reverse=True) == actual
 
     # Testing if (key, value) in expected is equal to (key, value) in actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_by_country_name_value(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_by_country_name_value(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountByCountry"
         response = requests.post(url, json=data["data"])
 
@@ -130,31 +99,18 @@ class Tests:
         assert expected == actual
 
     # Testing if the length of expected = length of actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_len_count_password_complexity(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_length_count_password_complexity(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountPasswordComplexity"
         response = requests.post(url, json=data["data"])
-        if len(response.json()) != len(data["expected_password_complexity"]):
-            assert False
-        assert True
+        # todo: simplify this assertion
+        assert len(response.json()) == len(data["expected_password_complexity"])
 
     # Testing if the values are in descending order
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_password_complexity_values_descending(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_password_complexity_values_descending(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountPasswordComplexity"
         response = requests.post(url, json=data["data"])
 
@@ -164,15 +120,9 @@ class Tests:
         assert sorted(actual, reverse=True) == actual
 
     # Testing if (key, value) in expected is equal to (key, value) in actual
-    @parameterized.expand([
-        'test_data/gender_country_password_10_user.json',
-        'test_data/gender_country_password_5_user.json',
-        'test_data/gender_country_password_1_user.json',
-        'test_data/gender_country_password_0_users.json',
-        'test_data/gender_country_password_15_user.json'
-    ])
-    def test_count_password_complexity_name_value(self, base):
-        data = read_json(base)
+    @pytest.mark.parametrize("source", test_data_source)
+    def test_count_password_complexity_name_value(self, source):
+        data = read_json(source)
         data["data"]["actionType"] = "CountPasswordComplexity"
         response = requests.post(url, json=data["data"])
 
